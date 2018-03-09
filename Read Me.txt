@@ -1,0 +1,34 @@
+Test Project On YII Framework.......
+
+Tools:
+1.PHP Storm as Editor
+2.XAMPP for local Server
+
+Database:
+1. Create a database named="imageshare2"
+2.create two tables.....
+	user table--->Atributes(id,username,password,email,publisher,parent)
+	admin table---->Atributes(id,username,password,email)
+	status table-->Attributed(serial,user_id,designation,privacy,share,status,image)
+
+
+Working Procedure:
+1. We have Generated 2 models for 2 MySQL tables and also used CRUD Generator to generate basic CRUP Operations.  
+2. We have 3 types of user for login system Admin,Agent,User. From the login panel there are some authentication for different users.....
+
+	if user is Admin Then
+			@ he is able to *create user,*manage user,*create status, *update status.......
+			@ Admin can see all the images posted by Agents and Users.
+	--> Example ID : admin Pass: pass1
+	if user is Agent Then
+			@ He can create status and view images posted by those users where the agent is declared as parent.
+			@ Agent can view his own and the posts where he is declared as a parent...
+	--> Example ID : agent1 Pass: pass1
+	if user logged in then
+			@user can only view his post 
+			@user can share his posts with other users
+			@if any user share his post with other he can also see the post which is shared with him.
+	--> Example ID : user1 Pass: pass1		
+
+
+
